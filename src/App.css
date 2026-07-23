@@ -1,0 +1,97 @@
+.myNav{
+    color: #fff !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.contant {
+    width: 80%;
+    position: absolute;
+    top: 0px;
+    left: 20%;
+}
+
+.sidebar{
+    width:20%;
+    min-height:100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background:#212529;
+    flex-shrink:0;
+}
+
+.Mycontainer{
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0px 20px;
+}
+
+.active{
+    background-color: blue;
+    margin: 5px;
+    border-radius: 7px;
+    border: 1px solid #fff;
+}
+
+.postListContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profileIcon{
+    color: #fff;
+    font-size: 20px;
+    
+}
+
+.homeIcon{
+    color: #fff;
+    font-size: 20px;
+}
+
+.postIcon{
+    color: #fff;
+    font-size: 20px;   
+}
+
+.registerIcon{
+    color: #fff;
+    font-size: 20px;   
+}
+
+.profileImage{
+    height: 35px;
+    width: 35px;
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.profileMain{
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+ .profileHadding {
+    display: flex;
+    margin-left: 53px;
+    margin-bottom: -1px;
+    margin-top: -32px;
+    font-weight: 500;
+}
+
+.postTital {
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
+
+button.btn.btn-primary {
+    margin-left: 3px;
+}
