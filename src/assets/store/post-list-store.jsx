@@ -21,7 +21,6 @@ const postListReducer = (curentPostList, action) => {
     return newPostList;
 }
 
-
 const PostListProvider = ({ children }) => {
 
     const [postList, dispachPostList] = useReducer(postListReducer, DEFULT_VALUE);
@@ -30,7 +29,7 @@ const PostListProvider = ({ children }) => {
         dispachPostList({
             type: 'ADD_POST',
             payload: {
-                id: time.now(),
+                id: Date.now(),
                 profileNmae: userId,
                 hashTag: tages,
                 profileImage: 'https://i.pravatar.cc/60?img=2',

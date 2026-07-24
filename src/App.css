@@ -95,3 +95,7 @@
 button.btn.btn-primary {
     margin-left: 3px;
 }
+
+.translate-middle-x {
+    transform: translateX(-10%)!important;
+}

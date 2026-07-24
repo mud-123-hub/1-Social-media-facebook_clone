@@ -1,5 +1,6 @@
 import { useContext, useRef } from "react";
 import { PostList } from '../store/post-list-store'
+import { SiSymantec } from "react-icons/si";
 
 const CreatePost = () => {
 
@@ -27,6 +28,17 @@ const CreatePost = () => {
         postReactionElement.current.value = '';
 
         addPost(userId, tages, postTitale, postContant, postReactions)
+
+        const notification = document.querySelector('#alerte');
+        setTimeout(() => {
+            if (notification) {
+                notification.style.display = "block";
+
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 2000);
+            }
+        }, 300)
     }
 
     return (
@@ -97,6 +109,15 @@ const CreatePost = () => {
                                         Create Post
                                     </button>
                                 </form>
+
+                                <div
+                                    id="alerte"
+                                    className="alert alert-success position-fixed top-0 start-50 translate-middle-x mt-3 "
+                                    style={{ display: "none", zIndex: 9999 }}
+                                >
+                                    <SiSymantec style={{ fontSize: '30px', color: 'green' }} />  Post Created Successfully!
+                                </div>
+
                             </div>
                         </div>
                     </div>
