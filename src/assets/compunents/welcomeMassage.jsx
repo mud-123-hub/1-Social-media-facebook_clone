@@ -1,7 +1,10 @@
 import { FaShareAlt } from "react-icons/fa";
 import { FaPrayingHands } from "react-icons/fa";
 import { FaPlaneDeparture } from "react-icons/fa";
-const WelcomeMassage = () => {
+const WelcomeMassage = ({HandleGetPostBtn}) => {
+
+    
+
     return (
         <>
             <div
@@ -27,6 +30,7 @@ const WelcomeMassage = () => {
                                     and memorable moments with your community.
                                     Every great conversation begins with a single post.
                                 </p>
+                                <button type="button" className="btn btn-primary" onClick={HandleGetPostBtn}>Get Posts From Server</button>
                                 <hr />
                                 <div className="row mt-4">
                                     <div className="col-md-4 mb-3">

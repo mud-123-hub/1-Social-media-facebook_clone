@@ -13,8 +13,6 @@ const Home = ({ post }) => {
 
     return (
         <>
-
-
             <div className="container mt-4">
                 <div className="card shadow-sm border-0 rounded-4 mb-4">
                     <div className="card-body">
@@ -72,14 +70,14 @@ const Home = ({ post }) => {
                         <hr />
 
                         <div className="mt-2">
-                            {post.hashTag.map((tag, index) => <button type="button" className={`btn btn-primary ${index > 1 ? "ms-2" : ''}`} key={index}>
+                            {post.tags.map((tag, index) => <button type="button" className={`btn btn-primary ${index > 1 ? "ms-2" : ''}`} key={index}>
                                 #{tag}
                             </button>)}
                         </div>
 
                         <hr />
                         <div className="mt-3">
-                            <h4 className="postTital">{post.tital}</h4>
+                            <h4 className="postTital">{post.title}</h4>
                             <p className="fs-5">
                                 {post.body}
                             </p>

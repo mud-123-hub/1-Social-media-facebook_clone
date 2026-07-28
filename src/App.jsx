@@ -11,7 +11,6 @@ import Profile from './assets/compunents/Profile';
 import PostListProvider from './assets/store/post-list-store';
 
 
-
 function App() {
 
   const [selectedTabe, setSelectedTab] = useState('Home');

@@ -117,7 +117,6 @@ const CreatePost = () => {
                                 >
                                     <SiSymantec style={{ fontSize: '30px', color: 'green' }} />  Post Created Successfully!
                                 </div>
-
                             </div>
                         </div>
                     </div>

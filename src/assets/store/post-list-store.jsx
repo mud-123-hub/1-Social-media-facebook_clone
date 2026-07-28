@@ -4,26 +4,26 @@ import { createContext, useReducer } from "react";
 export const PostList = createContext({
     postList: [],
     addPost: () => { },
+    addInitialPosts: () => { },
     deletePost: () => { },
 });
-
 
 const postListReducer = (curentPostList, action) => {
     let newPostList = curentPostList;
 
     if (action.type === 'DELETE_POST') {
         newPostList = curentPostList.filter((post) => post.id !== action.payload.postId)
+    } else if (action.type === 'ADD_INITIAL_POSTS') {
+        newPostList = action.payload.posts;
     } else if (action.type === 'ADD_POST') {
         newPostList = [action.payload, ...curentPostList]
     }
-
 
     return newPostList;
 }
 
 const PostListProvider = ({ children }) => {
-
-    const [postList, dispachPostList] = useReducer(postListReducer, DEFULT_VALUE);
+    const [postList, dispachPostList] = useReducer(postListReducer, []);
 
     const addPost = (userId, tages, postTitale, postContant, postReactions) => {
         dispachPostList({
@@ -31,11 +31,20 @@ const PostListProvider = ({ children }) => {
             payload: {
                 id: Date.now(),
                 profileNmae: userId,
-                hashTag: tages,
+                tags: tages,
                 profileImage: 'https://i.pravatar.cc/60?img=2',
-                tital: postTitale,
+                title: postTitale,
                 body: postContant,
                 reaction: postReactions,
+            }
+        })
+    };
+
+    const addInitialPosts = (posts) => {
+        dispachPostList({
+            type: 'ADD_INITIAL_POSTS',
+            payload: {
+                posts
             }
         })
     };
@@ -53,6 +62,7 @@ const PostListProvider = ({ children }) => {
         <PostList.Provider value={{
             postList,
             addPost,
+            addInitialPosts,
             deletePost,
         }}>
             {children}
@@ -60,7 +70,6 @@ const PostListProvider = ({ children }) => {
     )
 };
 
-const DEFULT_VALUE = []
 
 export default PostListProvider;
 
