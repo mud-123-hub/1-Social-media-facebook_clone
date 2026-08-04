@@ -19,9 +19,10 @@ const Home = ({ post }) => {
                         <div className="d-flex justify-content-between align-items-center">
                             <div className="d-flex align-items-center">
                                 <img
-                                    src={post.profileImage}
-                                    className="rounded-circle me-3"
+                                    src={`https://api.dicebear.com/9.x/avataaars/svg?seed=${post.userId}`}
+                                    className="rounded-circle me-1"
                                     alt="Profile"
+                                    style={{ width: "60px", height: "60px" }}
                                 />
                                 <div>
                                     <h5 className="mb-0">{post.profileNmae}</h5>

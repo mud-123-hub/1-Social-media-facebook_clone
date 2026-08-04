@@ -27,7 +27,7 @@ function App() {
               <Register></Register>
             </Container>)}
             {selectedTabe === 'Profile' && <Profile></Profile>}
-            <Footer></Footer>
+            <Footer />
           </div>
         </div>
       </PostListProvider>

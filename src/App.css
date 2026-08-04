@@ -99,3 +99,9 @@ button.btn.btn-primary {
 .translate-middle-x {
     transform: translateX(-10%)!important;
 }
+
+.spinner-border {
+    margin: 32px 0px;
+    width: 50px;
+    height: 50px;
+}

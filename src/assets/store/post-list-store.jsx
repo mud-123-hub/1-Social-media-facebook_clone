@@ -32,7 +32,6 @@ const PostListProvider = ({ children }) => {
                 id: Date.now(),
                 profileNmae: userId,
                 tags: tages,
-                profileImage: 'https://i.pravatar.cc/60?img=2',
                 title: postTitale,
                 body: postContant,
                 reaction: postReactions,
